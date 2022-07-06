@@ -1,9 +1,11 @@
-import SearchComponents from "../components/Search";
+import ContentLandingPage from "../components/ContentLandingPage";
 import React from "react";
 
-const LandingPage = () =>{
+const LandingPage = ({setValue}) =>{
     return(
-        <SearchComponents />
+        <div style={{width:'100%'}}>
+            <ContentLandingPage values={setValue}/>
+        </div>
     )
 }
 
