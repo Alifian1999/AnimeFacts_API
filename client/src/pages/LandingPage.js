@@ -1,10 +1,10 @@
 import ContentLandingPage from "../components/ContentLandingPage";
 import React from "react";
 
-const LandingPage = ({setValue}) =>{
+const LandingPage = ({setValue, setAnimeName}) =>{
     return(
         <div style={{width:'100%'}}>
-            <ContentLandingPage values={setValue}/>
+            <ContentLandingPage values={setValue} setAnimeName={setAnimeName}/>
         </div>
     )
 }

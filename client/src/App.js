@@ -11,12 +11,13 @@ import React, { useState } from 'react';
 
 function App() {
   const [value, setValue] = useState([])
+  const [animeName, setAnimeName] = useState('')
   return (
     <div style={{width:'100%'}}>
       <Provider>
         <Routes>
-          <Route path='/' element={<LandingPage setValue={setValue}/>} />
-          <Route path='anime-description/' element={<AnimeDescription value={value} />} />
+          <Route path='/' element={<LandingPage setValue={setValue} setAnimeName={setAnimeName}/>} />
+          <Route path='anime-description/' element={<AnimeDescription value={value} animeName={animeName} />} />
         </Routes>
       </Provider>
     </div>

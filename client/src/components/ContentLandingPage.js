@@ -4,7 +4,7 @@ import '../componentStyle/content-landingpage.css'
 import { Link } from "react-router-dom";
 
 
-const ContentLandingPage = ({values}) =>{
+const ContentLandingPage = ({values, setAnimeName}) =>{
     const [value, setValue] = useState('')
 
     useEffect(()=>{
@@ -23,14 +23,7 @@ const ContentLandingPage = ({values}) =>{
 
     const handleClick = async(e) =>{
         const anime_target = e.anime_name
-        try {
-            const server = await baseAPI.get(`/anime-description/${anime_target}`)
-            const datas = await server.data.data
-            const convert = JSON.parse(datas)
-            values(convert)
-        } catch (error) {
-            console.log(error);
-        }
+        setAnimeName(anime_target)
     }
 
     return(

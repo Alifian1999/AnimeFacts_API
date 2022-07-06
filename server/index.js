@@ -14,9 +14,6 @@ app.get('/',(req,res)=>{
         const failed = error
         const success = response? response.body :null
         const data = await body
-        console.error('error:',failed); // Print the error if one occurred
-        console.log('statusCode:',success); // Print the response status code if a response was received
-        console.log('body:',data); // Print the HTML for the Google homepage.
 
         res.status(200).send({
             status:'success',
